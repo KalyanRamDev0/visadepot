@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header with Dropdown and Form</title>
+    <link rel="stylesheet" href="tvd.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">Placements</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data-form="section1">SKILL DEVELOPMENT</a></li>
+                        <li><a href="#" data-form="section2">INTERNSHIP PROGRAM</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="form-container" class="form-container hidden">
+        <form id="placement-form">
+            <h2>Placement Form</h2>
+            <label for="name"> Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="degree">Graduation Stream:</label>
+            <input type="text" id="degree" name="degree" required>
+
+            <label for="email"> Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="section">Select Section:</label>
+            <select id="section" name="section" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="skill-development">Skill Development</option>
+                <option value="internship-program">Internship-Program</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="tvd.js"></script>
+</body>
+</html>
